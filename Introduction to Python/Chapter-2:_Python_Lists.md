@@ -17,27 +17,28 @@ lessons:
 
 ## Python Lists
 
-```yaml
-type: VideoExercise
-key: a5886d213f
-xp: 50
-```
 
-`@projector_key`
-a0530c4542f10988847b2dbb91f717c3
+1. Python Lists<br>
+Welcome back aspiring Pythonista. By now, you've played around with different data types, and I hope you've had as much fun as I have.
 
----
+2. Python Data Types<br>
+On the numbers side, there's the float, to represent a real number, and the int, to represent an integer. Next, we also have str, short for string, to represent text in Python, and bool, which can be either True or False. You can save these values as a variable, like these examples show. Each variable then represents a single value. As a data scientist,
+
+3. Problem<br>
+you'll often want to work with many data points. If you for example want to measure the height of everybody in your family, and store this information in Python, it would be inconvenient to create a new python variable for each point you collected right? What you can do instead, is store all this information in a Python list.
+
+4. Python List<br>
+You can build such a list with square brackets. Suppose you asked your two sisters and parents for their height, in meters. You can build the list as follows: Of course, also this data structure can be referenced to with a variable. Simply put the variable name and the equals sign in front, like here. A list is a way to give a single name to a collection of values. These values, or elements, can have any type; they can be floats, integer, booleans, strings, but also more advanced Python types, even lists. It's perfectly possible for a list to contain different types as well.
+
+5. Python List<br>
+Suppose, for example, that you want to add the names of your sisters and parents to the list, so that you know which height belongs to who. You can throw in some strings without issues. But that's not all. I just told you that lists can also contain lists themselves. Instead of putting the strings in between the numbers, you can create little sublists for each member of the family. One for liz, one for emma and so on. Now, you can tell Python that these sublists are the elements of another list, that I named fam2: the little lists are wrapped in square brackets and separated with commas. If you now print out fam2, you see that we have a list of lists. The main list contains 4 sub-lists. We're dealing with a new Python type here, next to the strings, booleans, integers and floats you already know about:
+
+6. List type<br>
+the list. These calls show that both fam and fam2 are lists. Remember that I told you that each type has specific functionality and behavior associated? Well, for lists, this is also true. Python lists host a bunch of tools to subset and adapt them. But let's take this step by step,
+
+
 
 ## Create a list
-
-```yaml
-type: NormalExercise
-key: e6c527bf41
-lang: python
-xp: 100
-skills:
-  - 2
-```
 
 As opposed to `int`, `bool` etc., a list is a **compound data type**; you can group values together:
 
@@ -49,17 +50,17 @@ my_list = ["my", "list", a, b]
 
 After measuring the height of your family, you decide to collect some information on the house you're living in. The areas of the different parts of your house are stored in separate variables for now, as shown in the script.
 
-`@instructions`
+### `@instructions`
 - Create a list, `areas`, that contains the area of the hallway (`hall`), kitchen (`kit`), living room (`liv`), bedroom (`bed`) and bathroom (`bath`), in this order. Use the predefined variables.
 - Print `areas` with the [`print()`](https://docs.python.org/3/library/functions.html#print) function.
 
-`@hint`
+### `@hint`
 - You can use the variables that have already been created to build the list: `areas = [hall, kit, ...]`.
 - Put `print(areas)` in your script to print out the list when submitting.
 
 
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # area variables (in square meters)
 hall = 11.25
@@ -76,7 +77,7 @@ bath = 9.50
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Area variables (in square meters)
 hall = 11.25
@@ -92,7 +93,7 @@ areas = [hall, kit, liv, bed, bath]
 print(areas)
 ```
 
-`@sct`
+### `@sct`
 ```{python}
 predef_msg = "Don't remove or edit the predefined variables!"
 areas_msg = "Define `areas` as the list containing all the area variables, in the correct order: `[hall, kit, liv, bed, bath]`. Watch out for typos. The list shouldn't contain anything else!"
@@ -118,14 +119,7 @@ success_msg("Nice! A list is way better here, isn't it?")
 
 ## Create list with different types
 
-```yaml
-type: NormalExercise
-key: 1702a8bcdc
-lang: python
-xp: 100
-skills:
-  - 2
-```
+
 
 A list can contain any Python type. Although it's not really common, a list can also contain a mix of Python types including strings, floats, booleans, etc.
 
@@ -133,16 +127,16 @@ The printout of the previous exercise wasn't really satisfying. It's just a list
 
 The code in the editor is the start of a solution. For some of the areas, the name of the corresponding room is already placed in front. Pay attention here! `"bathroom"` is a string, while `bath` is a variable that represents the float `9.50` you specified earlier.
 
-`@instructions`
+### `@instructions`
 - Finish the code that creates the `areas` list. Build the list so that the list first contains the name of each room as a string and then its area. In other words, add the strings `"hallway"`, `"kitchen"` and `"bedroom"` at the appropriate locations.
 - Print `areas` again; is the printout more informative this time?
 
-`@hint`
+### `@hint`
 The first three 4 elements of the list `areas` are coded as `["hallway", hall, "kitchen", kit, ...`.
 
 
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # area variables (in square meters)
 hall = 11.25
@@ -158,7 +152,7 @@ areas = [hall, kit, "living room", liv, bed, "bathroom", bath]
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # area variables (in square meters)
 hall = 11.25
@@ -174,7 +168,7 @@ areas = ["hallway", hall, "kitchen", kit, "living room", liv, "bedroom", bed, "b
 print(areas)
 ```
 
-`@sct`
+### `@sct`
 ```{python}
 objs = ["hall", "kit", "liv", "bed", "bath"]
 predef_msg = "Don't remove or edit the predefined variables!"
@@ -194,15 +188,6 @@ success_msg("Nice! This list contains both strings and floats, but that's not a 
 
 ## Select the valid list
 
-```yaml
-type: MultipleChoiceExercise
-key: 416b80a405
-lang: python
-xp: 50
-skills:
-  - 2
-```
-
 A list can contain any Python type. But a list itself is also a Python type. That means that a list can also contain a list! Python is getting funkier by the minute, but fear not, just remember the list syntax:
 
 ```
@@ -221,15 +206,12 @@ C. `[1 + 2, "a" * 5, 3]`
 - B and C
 - C
 
-`@hint`
+### `@hint`
 Try out all the different lines in the Python shell and see which ones generate an error. Maybe none of them go wrong?
 
-`@pre_exercise_code`
-```{python}
 
-```
 
-`@sct`
+### `@sct`
 ```{python}
 msg1 = "Correct! As funny as they may look, all these commands are valid ways to build a Python list."
 msg2 = "Command B is valid, but it's not the only one!"
@@ -242,14 +224,7 @@ Ex().has_chosen(1,[msg1,msg2,msg3,msg4])
 
 ## List of lists
 
-```yaml
-type: NormalExercise
-key: 9158c577b0
-lang: python
-xp: 100
-skills:
-  - 2
-```
+
 
 As a data scientist, you'll often be dealing with a lot of data, and it will make sense to group some of this data.
 
@@ -257,12 +232,12 @@ Instead of creating a flat list containing strings and floats, representing the 
 
 Don't get confused here: `"hallway"` is a string, while `hall` is a variable that represents the float `11.25` you specified earlier.
 
-`@instructions`
+### `@instructions`
 - Finish the list of lists so that it also contains the bedroom and bathroom data. Make sure you enter these in order!
 - Print out `house`; does this way of structuring your data make more sense?
 - Print out the type of `house`. Are you still dealing with a list?
 
-`@hint`
+### `@hint`
 - Add _sublists_ to the `house` list by adding `["bedroom", bed]` and `["bathroom", bath]` inside the square brackets.
 - To print a variable `x`, write `print(x)` on a new line in the Python script.
 - To print out the type of a variable `x`, you can use `print(type(x))`.
@@ -293,7 +268,7 @@ house = [["hallway", hall],
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # area variables (in square meters)
 hall = 11.25
@@ -316,7 +291,7 @@ print(house)
 print(type(house))
 ```
 
-`@sct`
+### `@sct`
 ```{python}
 predef_msg = "Don't remove or edit the predefined variables!"
 house_msg = "You didn't assign the correct value to `house`. Have another look at the instructions. Extend the list of lists so it incorporates a list for each pair of room name and room area. Mind the order and typos!"
@@ -342,27 +317,8 @@ success_msg("Great! Get ready to learn about list subsetting!")
 
 ## Subsetting Lists
 
-```yaml
-type: VideoExercise
-key: c076b5a69c
-xp: 50
-```
-
-`@projector_key`
-fc15ba5cb9485456df8589130b519ea3
-
----
 
 ## Subset and conquer
-
-```yaml
-type: NormalExercise
-key: c3ce582e32
-lang: python
-xp: 100
-skills:
-  - 2
-```
 
 Subsetting Python lists is a piece of cake. Take the code sample below, which creates a list `x` and then selects "b" from it. Remember that this is the second element, so it has index 1. You can also use negative indexing.
 
@@ -374,12 +330,12 @@ x[-3] # same result!
 
 Remember the `areas` list from before, containing both strings and floats? Its definition is already in the script. Can you add the correct code to do some Python subsetting?
 
-`@instructions`
+### `@instructions`
 - Print out the second element from the `areas` list (it has the value `11.25`).
 - Subset and print out the last element of `areas`, being `9.50`. Using a negative index makes sense here!
 - Select the number representing the area of the living room (`20.0`) and print it out.
 
-`@hint`
+### `@hint`
 - Use `x[1]` to select the second element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - Use `x[-1]` to select the last element of a list `x`. Make sure to wrap your subsetting operation in a [`print()`](https://docs.python.org/3/library/functions.html#print) call.
 - The number representing the area of the living room is the 6th element in the list, so you'll need `[5]` here.
@@ -389,7 +345,7 @@ Remember the `areas` list from before, containing both strings and floats? Its d
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -404,7 +360,7 @@ print(areas[__])
 print(areas[_])
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -419,7 +375,7 @@ print(areas[-1])
 print(areas[5])
 ```
 
-`@sct`
+### `@sct`
 ```{python}
 msg = "Don't remove or edit the predefined `areas` list."
 Ex().check_object("areas", missing_msg = msg).has_equal_value(incorrect_msg = msg)
@@ -453,7 +409,7 @@ print(x[1] + x[3])
 - Using a combination of list subsetting and variable assignment, create a new variable, `eat_sleep_area`, that contains the sum of the area of the kitchen and the area of the bedroom.
 - Print the new variable `eat_sleep_area`.
 
-`@hint`
+### `@hint`
 - Add `areas[3]` to `areas[-3]` to calculate `eat_sleep_area`.
 - Print out `eat_sleep_area`: `print(eat_sleep_area)`.
 
@@ -462,7 +418,7 @@ print(x[1] + x[3])
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -474,7 +430,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -540,7 +496,7 @@ The elements with index 1 and 2 are included, while the element with index 3 is 
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -554,7 +510,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 # Print out downstairs and upstairs
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -626,7 +582,7 @@ x[:]
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -638,7 +594,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -698,7 +654,7 @@ What will `house[-1][1]` return? `house`, the list of lists that you created bef
 `@hint`
 `house[-1]` selects the last element of `house`, which is the list `["bathroom", 9.50]`. What's the result if you then subset this sublist with `[1]`? You can always try out the command in the IPython Shell!
 
-`@pre_exercise_code`
+### `@pre_exercise_code`
 ```{python}
 house = [["hallway", 11.25],
          ["kitchen", 18.0],
@@ -778,7 +734,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.7
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list
 areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
@@ -839,7 +795,7 @@ You just won the lottery, awesome! You decide to build a poolhouse and a garage.
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create the areas list and make some changes
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
@@ -852,7 +808,7 @@ areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
 
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create the areas list (updated version)
 areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
@@ -976,7 +932,7 @@ Change the `areas_copy = areas` call. Instead of assigning `areas`, you can assi
 
 ```
 
-`@sample_code`
+### `@sample_code`
 ```{python}
 # Create list areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
@@ -991,7 +947,7 @@ areas_copy[0] = 5.0
 print(areas)
 ```
 
-`@solution`
+### `@solution`
 ```{python}
 # Create list areas
 areas = [11.25, 18.0, 20.0, 10.75, 9.50]
