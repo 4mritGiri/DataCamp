@@ -1,11 +1,11 @@
 ---
-title_meta: Chapter 1
-title: Python Basics
-description: >-
+Title_Meta: Chapter 1
+Course___Title: Python Basics
+Course____Description: >-
   An introduction to the basic concepts of Python. Learn how to use Python
   interactively and by using a script. Create your first variables and acquaint
   yourself with Python's basic data types.
-attachments:
+Attachments:
   slides_link: 'https://projector-video-pdf-converter.datacamp.com/735/chapter1.pdf'
 free_preview: true
 lessons:
