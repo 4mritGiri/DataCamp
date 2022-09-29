@@ -1,7 +1,7 @@
-<!-- ---
+---
 title_meta: Chapter 2
-title: Python Lists
-description: >-
+Course_title: Python Lists
+Course_description: >-
   Learn to store, access, and manipulate data in lists: the first step toward
   efficiently working with huge amounts of data.
 attachments:
@@ -13,7 +13,8 @@ lessons:
     title: Subsetting Lists
   - nb_of_exercises: 5
     title: Manipulating Lists
---- -->
+    
+--- 
 
 ## Python Lists
 
